@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.chw.demo</groupId>
-	<artifactId>spring-euraka-client</artifactId>
+	<artifactId>spring-mybatis</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-euraka-client</name>
+	<name>spring-mybatis</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -33,16 +33,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-<!-- 		<dependency>            
-			<groupId>org.springframework.cloud</groupId>            
-			<artifactId>spring-cloud-commons</artifactId>        
-		</dependency> -->
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
 
