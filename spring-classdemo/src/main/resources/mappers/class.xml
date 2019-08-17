@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.ClassMapper">
+  <resultMap id="BaseResultMap" type="com.example.demo.model.Clazz">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="class_name" jdbcType="VARCHAR" property="className" />
+    <result column="student_id" jdbcType="INTEGER" property="studentId" />
+  </resultMap>
+
+	<insert id="save">
+	insert into clazz (id, class_name, student_id) values(#{id}, #{className}, #{studentId})
+	
+	</insert>
+  	 
+</mapper>

@@ -1,8 +1,14 @@
 package com.example.demo.controller;
 
+
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import com.example.demo.feign.RefreshService;
 import com.example.demo.model.ConfigProperties;
@@ -33,6 +39,20 @@ public class ConfigController {
 			if (count == 1) {
 				refreshService.refresh();
 			}
+		}catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+		
+	}
+	
+	@ApiOperation(value = "测试请求头")
+	@RequestMapping("/testheader")
+	public void testheader() {
+		try {
+			ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+			HttpServletRequest request = attributes.getRequest();
+			System.out.println(request);
 		}catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
